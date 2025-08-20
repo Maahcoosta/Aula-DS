@@ -1,0 +1,223 @@
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f2f5;
+            font-size: 0.95em; /* Tamanho do texto ligeiramente reduzido para todo o corpo */
+        }
+        .container {
+            max-width: 900px;
+            margin: 2rem auto;
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column; /* Padrão para mobile */
+        }
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row; /* Para desktop */
+            }
+        }
+        .left-panel {
+            background-color: #1A3C6B; /* Azul marinho escuro para o painel lateral */
+            color: #ffffff; /* Cor padrão do texto no painel esquerdo (branco) */
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%; /* Padrão para mobile */
+            justify-content: space-between; /* Para empurrar o conteúdo para cima e para baixo */
+        }
+        .left-panel-content { /* Novo contêiner para o conteúdo superior */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        .left-panel h1 { /* Estilo para o nome no painel esquerdo */
+            color: #ffffff; /* Cor branca para o nome */
+            margin-top: 1.5rem; /* Adiciona margem superior para descer o texto */
+        }
+        .left-panel h3 { /* Estilo para os títulos de seção no painel esquerdo */
+            color: #ffffff; /* Cor branca para os títulos de seção */
+            font-size: 1.1rem; /* Reduzido o tamanho do texto do título de habilidades */
+            font-weight: 600; /* Manter o peso de h3 */
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* Espaçamento entre ícone e texto */
+        }
+        .left-panel .skill-circle { /* Estilo para bolinhas ativas de habilidade no painel esquerdo */
+            background-color: #ffffff; /* Brancas para contraste */
+            width: 9px; /* Tamanho da bolinha reduzido */
+            height: 9px; /* Tamanho da bolinha reduzido */
+        }
+        .left-panel .skill-circle.inactive { /* Estilo para bolinhas inativas de habilidade no painel esquerdo */
+            background-color: rgba(255, 255, 255, 0.5); /* Branco semi-transparente */
+            opacity: 1; /* Garantir que a opacidade seja controlada pela rgba */
+        }
+        .left-panel .skill-item span { /* Ajuste do tamanho do texto das habilidades */
+            font-size: 1em; /* Aumenta o tamanho do texto das habilidades */
+            margin-bottom: 0.25rem; /* Adiciona um pequeno espaçamento abaixo do texto */
+        }
+        .left-panel .skill-item {
+            display: flex;
+            flex-direction: column; /* Coloca texto acima das bolinhas */
+            align-items: center; /* Centraliza horizontalmente o conteúdo */
+            width: 100%; /* Garante que o item ocupe a largura total */
+            margin-bottom: 0.75rem; /* Espaçamento entre cada item de habilidade */
+        }
+        .left-panel .space-y-3 {
+            width: 100%; /* Garante que o contêiner das habilidades ocupe a largura total */
+            padding-left: 1rem; /* Adiciona um pequeno padding para alinhamento com os contatos */
+            padding-right: 1rem;
+        }
+        .left-panel .skill-level {
+            gap: 0.15rem; /* Reduz o espaçamento entre as bolinhas */
+        }
+
+        @media (min-width: 768px) {
+            .left-panel {
+                width: 30%; /* Reduzido de 35% para 30% */
+            }
+            .right-panel {
+                width: 70%; /* Aumentado para 70% para compensar */
+            }
+        }
+        .right-panel {
+            flex-grow: 1;
+            padding: 2rem;
+            width: 100%; /* Padrão para mobile */
+        }
+        .profile-picture {
+            width: 180px; /* Aumentado o tamanho da imagem */
+            height: 180px; /* Aumentado o tamanho da imagem */
+            border-radius: 50%;
+            object-fit: cover;
+            border: 8px solid #ffffff;
+            margin-bottom: 1.5rem;
+        }
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.75rem;
+            gap: 0.5rem;
+        }
+        .contact-item svg { /* Aumenta o tamanho do ícone de contato */
+            color: #ffffff;
+            width: 24px;
+            height: 24px;
+        }
+        h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: #1A3C6B; /* Azul do painel lateral para o título principal */
+        }
+        h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: #1A3C6B; /* Azul mais neutro para subtítulos no painel direito */
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 1rem;
+        }
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+        .skill-level {
+            display: flex;
+            gap: 0.25rem;
+        }
+        .skill-circle {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #1A3C6B; /* Azul do painel lateral para bolinhas ativas no painel direito */
+        }
+        .skill-circle.inactive {
+            background-color: #e0e0e0; /* Cinza claro para bolinhas inativas no painel direito */
+        }
+        .right-panel h2 {
+            border-color: #1A3C6B; /* Azul do painel lateral para a borda do título principal */
+        }
+
+        /* Estilos para Impressão (Formato A4) */
+        @media print {
+            @page {
+                size: A4;
+                margin: 0.5cm; /* Margens menores para aproveitar o espaço */
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                font-size: 10pt; /* Tamanho de fonte padrão para impressão */
+                background-color: #fff; /* Fundo branco para impressão */
+            }
+
+            .container {
+                width: 100%; /* Ocupa toda a largura da página, considerando as margens do @page */
+                max-width: none; /* Remove a restrição de largura máxima */
+                height: 28.7cm; /* Altura aproximada de A4 menos 1cm de margem total */
+                margin: 0 auto; /* Centraliza na página */
+                box-shadow: none; /* Remove sombra */
+                border-radius: 0; /* Remove bordas arredondadas */
+                flex-direction: row !important; /* Garante layout de duas colunas */
+                align-items: stretch; /* Garante que os painéis se estiquem para a altura total */
+            }
+
+            /* Ajustes específicos para painéis em impressão */
+            .left-panel, .right-panel {
+                padding: 1.5cm; /* Padding ajustado para impressão */
+                box-sizing: border-box; /* Inclui padding na largura/altura total */
+            }
+
+            .left-panel {
+                width: 30%; /* Mantém a proporção do painel esquerdo para impressão */
+                justify-content: space-between; /* Garante que as habilidades continuem na parte inferior */
+            }
+            .right-panel {
+                width: 70%; /* Mantém a proporção do painel direito para impressão */
+            }
+
+            .profile-picture {
+                width: 150px; /* Reduz a foto para um tamanho mais adequado para impressão A4 */
+                height: 150px;
+                border: 4px solid #ffffff; /* Borda um pouco mais fina */
+                margin-bottom: 1rem;
+            }
+
+            .contact-item {
+                margin-bottom: 0.5rem; /* Espaçamento menor entre itens de contato */
+            }
+
+            h1, h2, h3 {
+                margin-bottom: 0.75rem; /* Margens de título ajustadas */
+            }
+
+            ul {
+                margin-bottom: 0.75rem; /* Margens de lista ajustadas */
+            }
+
+            .skill-item span {
+                font-size: 0.9em; /* Tamanho da fonte das habilidades para impressão */
+            }
+            .left-panel .skill-circle {
+                width: 8px; /* Bolinhas menores para impressão */
+                height: 8px;
+            }
+            .left-panel .skill-level {
+                gap: 0.1rem; /* Espaçamento menor entre bolinhas */
+            }
+            .left-panel section {
+                margin-top: 1rem; /* Margem superior ajustada para seções no painel esquerdo */
+            }
+            .right-panel section {
+                margin-bottom: 1.25rem; /* Margem inferior ajustada para seções no painel direito */
+            }
+        }
