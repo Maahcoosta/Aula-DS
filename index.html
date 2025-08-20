@@ -59,6 +59,50 @@
             list-style-type: disc;
             margin-left: 20px;
         }
+        
+        /* Estilos adicionais para o formulário */
+        .form-section {
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 30px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Garante que padding e borda não aumentem a largura */
+        }
+        .form-group textarea {
+            resize: vertical; /* Permite redimensionar verticalmente */
+            min-height: 100px;
+        }
+        .submit-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .submit-button:hover {
+            background-color: #2980b9;
+        }
     </style>
 </head>
 <body>
@@ -78,7 +122,7 @@
         <p>Colaborar de maneira positiva com o ambiente de trabalho, colocando sempre em prática meus conhecimentos em favor da instituição. Focando sempre no benefício e crescimento da organização e meu próprio crescimento profissional. Será uma honra fazer parte desta equipe!</p>
     </div>
 
-    ---
+    
 
     <h2>HABILIDADES</h2>
     <div class="section-content">
@@ -95,7 +139,7 @@
         </ul>
     </div>
 
-    ---
+    
 
     <h2>EXPERIÊNCIA</h2>
     <div class="section-content">
@@ -104,17 +148,17 @@
             <p>5 anos de experiência.</p>
         </div>
         <div class="experience-item">
-            <span class="job-title">Consultora de vendas</span> / <span class="company-name">Loja Help</span>
+            <span class="job-title">Consultora de Crédito</span> / <span class="company-name">Loja Help</span>
             <p>2 anos de experiência.</p>
         </div>
     </div>
 
-    ---
+    
 
     <h2>EDUCAÇÃO</h2>
     <div class="section-content">
         <div class="education-item">
-            <p><strong>Ensino Médio Completo</strong> desde 2012.</p>
+            <p><strong>Ensino Médio Completo</strong></p>
         </div>
         <div class="education-item">
             <p><strong>Superior Incompleto</strong>.</p>
@@ -127,7 +171,7 @@
         </div>
     </div>
 
-    ---
+    
 
     <h2>COMPLEMENTOS</h2>
     <div class="section-content">
@@ -139,5 +183,27 @@
         </div>
     </div>
 
+    
+
+    <div class="form-section">
+        <h2>FALE COMIGO</h2>
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="name">Seu Nome:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Seu E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Enviar Mensagem</button>
+        </form>
+    </div>
+
 </body>
+
 </html>
